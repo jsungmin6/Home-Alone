@@ -166,7 +166,7 @@ public class UserInfoController {
         //GetKakaoUserRes getKakaoUserRes;
         RestTemplate rt = new RestTemplate();//http요청을 간단하게 해줄 수 있는 클래
 
-
+        System.out.println("getAccessToken : "+postKakaoLoginReq.getAccessToken());
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "Bearer " + postKakaoLoginReq.getAccessToken());
