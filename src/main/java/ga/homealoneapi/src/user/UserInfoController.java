@@ -186,6 +186,7 @@ public class UserInfoController {
                     String.class
             );
         }catch (HttpClientErrorException exception){
+            System.out.println("=======return HttpClientErrorException exception===========");
             System.out.println("/login/kakao exception : " + exception);
             int statusCode=exception.getStatusCode().value();
 
@@ -201,7 +202,7 @@ public class UserInfoController {
 
         }
 
-
+        System.out.println("=========Don`t work http exception===========");
         ObjectMapper objectMapper = new ObjectMapper();
         KakaoProfile profile = null;
         String jwt = null;
@@ -215,19 +216,19 @@ public class UserInfoController {
 
 
            }catch (BaseException exception){
+               System.out.println("=========return NEW_KAKAO_USERS===========");
                return new BaseResponse<>(BaseResponseStatus.NEW_KAKAO_USERS);
            }
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();
 
-
         }
 
 
         // 변경전 jwt=jwtService.createJwt(userInfo.getId(), userInfo.getUserName(), userInfo.getSnsId());
         jwt=jwtService.createJwt(userInfo.getId(), userInfo.getUserName());
-
+        System.out.println("=========return SUCCESS_KAKAO_LOGIN===========");
         return new BaseResponse<>(BaseResponseStatus.SUCCESS_KAKAO_LOGIN, new PostKakaoLoginRes(userInfo.getId(),jwt));
     }
 
