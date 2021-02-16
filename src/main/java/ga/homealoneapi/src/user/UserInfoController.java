@@ -186,6 +186,7 @@ public class UserInfoController {
                     String.class
             );
         }catch (HttpClientErrorException exception){
+            System.out.println("/login/kakao exception : " + exception);
             int statusCode=exception.getStatusCode().value();
 
 
@@ -197,9 +198,6 @@ public class UserInfoController {
             else if(statusCode==401){
                 return new BaseResponse<>(BaseResponseStatus.INVALID_KAKAO);
             }
-
-
-
 
         }
 
