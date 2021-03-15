@@ -22,7 +22,7 @@
 
 ### 3. 기술
 
-- Spring boot, Spring Data Jpa, Spring Security, Nginx, EC2
+- Spring boot, Spring Data Jpa, Spring Security, Nginx, EC2, FCM, JPql
 
 ### 4. 개발 중 어려웠던 부분
 
