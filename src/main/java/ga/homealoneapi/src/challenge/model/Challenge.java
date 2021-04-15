@@ -34,7 +34,6 @@ public class Challenge extends BaseEntity {
     @Column(name = "certification")
     private int certification;
 
-
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "userIdx")
     private UserInfo userInfo;

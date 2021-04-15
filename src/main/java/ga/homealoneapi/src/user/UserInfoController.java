@@ -153,8 +153,6 @@ public class UserInfoController {
      * @return
      * @throws BaseException
      */
-
-
     @ResponseBody
     @PostMapping("/login/kakao")
     public BaseResponse<PostKakaoLoginRes> getKakaoUser(@org.springframework.web.bind.annotation.RequestBody PostKakaoLoginReq postKakaoLoginReq) throws BaseException, JsonProcessingException {
@@ -222,7 +220,6 @@ public class UserInfoController {
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();
-
         }
 
 

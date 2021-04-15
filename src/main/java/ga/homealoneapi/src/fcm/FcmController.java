@@ -40,7 +40,6 @@ public class FcmController {
             return;
         }
 
-
         String title = "나홀로 집콕";
         String body = "집콕 챌린지 잊지마세요!";
 
